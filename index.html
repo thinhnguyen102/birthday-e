@@ -641,6 +641,13 @@
         startCountdown();
         // pháo hoa (liên tục) đã auto chạy ở trên (IIFE fwLoop)
       });
+      window.addEventListener("orientationchange", () => {
+  setTimeout(() => {
+    resizeStars();
+    resizeFireworks();
+  }, 300); // chờ xoay xong
+});
+
     </script>
     <!-- Thêm thanh trượt -->
     <div id="brightness-control">
@@ -674,5 +681,6 @@
     </style>
   </body>
 </html>
+
 
 
